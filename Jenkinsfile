@@ -73,7 +73,7 @@ pipeline {
                         sh 'docker restart m-cart-service'
                     } else {
                         echo "No existing container named 'm-eureka-server' found. Proceeding with deployment."
-                        sh 'docker run -d -p 9008:9008 --name m-cart-service ${DOCKER_IMAGE}:latest'
+                        sh 'docker run --network=m-network -d -p 9008:9008 --name m-cart-service ${DOCKER_IMAGE}:latest'
                     }
                }
            }
