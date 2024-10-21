@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:Rofak/m-cart-service.git'
+                git branch: 'master', url: 'git@github.com:Rofak/m-cart-service.git'
             }
         }
 
